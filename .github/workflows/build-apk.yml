@@ -128,13 +128,20 @@ jobs:
         
         echo "e9acab5b5fbb560a72cfaecce8946896ff6aab9d" > ~/.buildozer/android/platform/android-sdk/licenses/mips-android-sysimage-license
         
-        # Create symlink to system SDK tools for buildozer
+        # Create symlink to system SDK tools for buildozer (in both locations)
         mkdir -p ~/.buildozer/android/platform/android-sdk/tools/bin
         ln -sf /usr/local/lib/android/sdk/cmdline-tools/latest/bin/sdkmanager ~/.buildozer/android/platform/android-sdk/tools/bin/sdkmanager
         ln -sf /usr/local/lib/android/sdk/cmdline-tools/latest/bin/avdmanager ~/.buildozer/android/platform/android-sdk/tools/bin/avdmanager
         
-        ls -la ~/.buildozer/android/platform/android-sdk/licenses/
-        ls -la ~/.buildozer/android/platform/android-sdk/tools/bin/
+        # Also create in the system SDK location
+        sudo mkdir -p /usr/local/lib/android/sdk/tools/bin
+        sudo ln -sf /usr/local/lib/android/sdk/cmdline-tools/latest/bin/sdkmanager /usr/local/lib/android/sdk/tools/bin/sdkmanager
+        sudo ln -sf /usr/local/lib/android/sdk/cmdline-tools/latest/bin/avdmanager /usr/local/lib/android/sdk/tools/bin/avdmanager
+        
+        echo "Buildozer SDK tools:"
+        ls -la ~/.buildozer/android/platform/android-sdk/tools/bin/ || true
+        echo "System SDK tools:"
+        ls -la /usr/local/lib/android/sdk/tools/bin/ || true
     
     - name: Build APK with Buildozer
       run: |
