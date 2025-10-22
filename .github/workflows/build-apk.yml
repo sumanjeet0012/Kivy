@@ -58,12 +58,18 @@ jobs:
     
     - name: Setup Android SDK
       uses: android-actions/setup-android@v3
+      with:
+        cmdline-tools-version: 11076708
+        packages: 'platform-tools platforms;android-33 build-tools;33.0.2 ndk;25.2.9519653'
+        accept-android-sdk-licenses: true
     
     - name: Accept Android SDK licenses
       run: |
-        yes | sdkmanager --licenses || true
-        sdkmanager --update
-        sdkmanager "platform-tools" "platforms;android-33" "build-tools;33.0.2" "ndk;25.2.9519653"
+        yes | ${ANDROID_SDK_ROOT}/cmdline-tools/latest/bin/sdkmanager --licenses || true
+        ${ANDROID_SDK_ROOT}/cmdline-tools/latest/bin/sdkmanager --update
+        ${ANDROID_SDK_ROOT}/cmdline-tools/latest/bin/sdkmanager "platform-tools" "platforms;android-33" "build-tools;33.0.2" "ndk;25.2.9519653"
+      env:
+        ANDROID_SDK_ROOT: /usr/local/lib/android/sdk
     
     - name: Install Python dependencies
       run: |
@@ -99,10 +105,14 @@ jobs:
     
     - name: Build APK with Buildozer
       run: |
-        buildozer -v android debug
+        yes | buildozer -v android debug
       env:
         ANDROID_SDK_ROOT: /usr/local/lib/android/sdk
         ANDROID_HOME: /usr/local/lib/android/sdk
+        ANDROIDSDK: /usr/local/lib/android/sdk
+        ANDROIDNDK: /usr/local/lib/android/sdk/ndk/25.2.9519653
+        ANDROIDAPI: 33
+        ANDROIDNDKVER: 25b
     
     - name: List output files
       if: always()
