@@ -1,26 +1,39 @@
 [app]
 
 # (str) Title of your application
-title = Hello World
+title = Universal Connectivity
 
 # (str) Package name
-package.name = helloworld
+package.name = universalconnectivity
 
 # (str) Package domain (needed for android/ios packaging)
-package.domain = org.example
+package.domain = org.p2p
 
 # (str) Source code where the main.py live
 source.dir = .
 
 # (list) Source files to include (let empty to include all the files)
-source.include_exts = py,png,jpg,kv,atlas
+source.include_exts = py,png,jpg,kv,atlas,txt
+
+# (list) List of inclusions using pattern matching
+#source.include_patterns = assets/*,images/*.png
+
+# (list) Source files to exclude (let empty to not exclude anything)
+source.exclude_exts = spec
+
+# (list) List of directory to exclude (let empty to not exclude anything)
+source.exclude_dirs = test,bin,__pycache__,.buildozer,.git,.github,venv
+
+# (list) List of exclusions using pattern matching
+source.exclude_patterns = license,*.pyc,*.pyo,*.spec,*.md,*.lock,.gitignore,.github/*,test/*,__pycache__/*
 
 # (str) Application versioning (method 1)
 version = 0.1
 
 # (list) Application requirements
 # comma separated e.g. requirements = sqlite3,kivy
-requirements = python3,kivy
+# Note: libp2p and its dependencies need to be included
+requirements = python3==3.11,kivy==2.3.0,kivymd==1.2.0,trio==0.24.0,base58,protobuf,janus,trio-asyncio,attrs,sortedcontainers,outcome,sniffio,idna,certifi,exceptiongroup,openssl,pycryptodome,cryptography,multiaddr,netaddr,varint,rsa,ecdsa,coincurve,cython==0.29.36
 
 # (str) Custom source folders for requirements
 # Sets custom source for any requirements with recipes
@@ -66,7 +79,8 @@ fullscreen = 0
 #android.presplash_color = #FFFFFF
 
 # (list) Permissions
-android.permissions = INTERNET
+# Universal Connectivity needs internet access for P2P networking
+android.permissions = INTERNET,ACCESS_NETWORK_STATE,ACCESS_WIFI_STATE
 
 # (int) Target Android API, should be as high as possible.
 android.api = 33
@@ -239,6 +253,13 @@ android.allow_backup = True
 
 # (str) python-for-android branch to use, defaults to master
 p4a.branch = develop
+
+# (str) Bootstrap to use for android builds (SDL2 is recommended for Kivy apps)
+p4a.bootstrap = sdl2
+
+# (str) Local python-for-android recipes directory (create custom recipes here)
+# Useful when including complex native dependencies like libp2p-related libraries
+p4a.local_recipes = p4a-recipes
 
 # (str) python-for-android specific commit to use, defaults to HEAD, must be within p4a.branch
 #p4a.commit = HEAD

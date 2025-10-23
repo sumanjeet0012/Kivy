@@ -1,4 +1,4 @@
-name: Build Kivy APK
+name: Build Universal Connectivity DApp APK
 
 on:
   push:
@@ -52,7 +52,12 @@ jobs:
           libssl-dev \
           libltdl-dev \
           cmake \
-          ccache
+          ccache \
+          libgmp-dev \
+          libmpfr-dev \
+          libmpc-dev \
+          rustc \
+          cargo
     
     - name: Set up Java
       uses: actions/setup-java@v4
@@ -80,6 +85,8 @@ jobs:
         pip install --upgrade buildozer
         pip install --upgrade cython==0.29.36
         pip install --upgrade virtualenv
+        # Pre-install some dependencies to speed up build
+        pip install trio base58 protobuf janus trio-asyncio
     
     - name: Cache Buildozer global directory
       uses: actions/cache@v4
@@ -87,7 +94,7 @@ jobs:
         path: |
           ~/.buildozer
           ~/.gradle
-        key: buildozer-global-${{ hashFiles('buildozer.spec') }}-${{ hashFiles('requirements.txt') }}
+        key: buildozer-global-${{ hashFiles('buildozer.spec') }}
         restore-keys: |
           buildozer-global-
     
