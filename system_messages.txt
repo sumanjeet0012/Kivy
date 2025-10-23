@@ -1,0 +1,92 @@
+[20:41:27] Universal Connectivity Chat Started
+[20:41:27] Nickname: peer-1760627487
+[20:41:27] Topic: universal-connectivity
+[20:41:27] Multiaddr: /ip4/0.0.0.0/tcp/53728/p2p/QmVBUob4VBYWTkSSsa7MAr8NZ4wgAZYmPgZW28cnbFJpa1
+[20:41:27] Commands: /quit, /peers, /status, /multiaddr
+[20:41:27] Joined chat room as 'peer-1760627487'
+[20:42:25] Universal Connectivity Chat Started
+[20:42:25] Nickname: peer-1760627545
+[20:42:25] Topic: universal-connectivity
+[20:42:25] Multiaddr: /ip4/0.0.0.0/tcp/53731/p2p/QmezucNn7eAoCtfPZvHGNfDP2RNqiz42nzH1ynwV5mx5UN
+[20:42:25] Commands: /quit, /peers, /status, /multiaddr
+[20:42:25] Joined chat room as 'peer-1760627545'
+[20:43:33] Subscribed to topic: pylibp2p
+[20:43:40] Subscribed to topic: pylibp2p
+[21:04:38] Universal Connectivity Chat Started
+[21:04:38] Nickname: peer-1760628878
+[21:04:38] Topic: universal-connectivity
+[21:04:38] Multiaddr: /ip4/0.0.0.0/tcp/54013/p2p/Qmed33d5gp5dSo8zczwor11tFg6JH3G5airQEZz3f4n81g
+[21:04:38] Commands: /quit, /peers, /status, /multiaddr
+[21:04:38] Joined chat room as 'peer-1760628878'
+[21:06:45] Universal Connectivity Chat Started
+[21:06:45] Nickname: peer-1760629005
+[21:06:45] Topic: universal-connectivity
+[21:06:45] Multiaddr: /ip4/0.0.0.0/tcp/54462/p2p/Qma2Dsw7YadK9eUP1nHUoQHAzQjb9B6Y6fdGioannX6tmV
+[21:06:45] Commands: /quit, /peers, /status, /multiaddr
+[21:06:45] Joined chat room as 'peer-1760629005'
+[21:07:18] Universal Connectivity Chat Started
+[21:07:18] Nickname: peer-1760629038
+[21:07:18] Topic: universal-connectivity
+[21:07:18] Multiaddr: /ip4/0.0.0.0/tcp/54649/p2p/QmW4sHeFAXKhbrR4oybkzc1BndKmM6TxexbwwieZhTz3LZ
+[21:07:18] Commands: /quit, /peers, /status, /multiaddr
+[21:07:18] Joined chat room as 'peer-1760629038'
+[21:09:30] Universal Connectivity Chat Started
+[21:09:30] Nickname: peer-1760629170
+[21:09:30] Topic: universal-connectivity
+[21:09:30] Multiaddr: /ip4/0.0.0.0/tcp/55066/p2p/QmYmkYqwxHWsWYBxkup87cx5tqUe9TkZiEwTdjkGjBFaLa
+[21:09:30] Commands: /quit, /peers, /status, /multiaddr
+[21:09:30] Joined chat room as 'peer-1760629170'
+[21:09:34] Universal Connectivity Chat Started
+[21:09:34] Nickname: peer-1760629174
+[21:09:34] Topic: universal-connectivity
+[21:09:34] Multiaddr: /ip4/0.0.0.0/tcp/55068/p2p/QmRBA98kJuhpkh5Zfwwbt6HsmNzePypoePmzvejvP7xaZm
+[21:09:34] Commands: /quit, /peers, /status, /multiaddr
+[21:09:34] Joined chat room as 'peer-1760629174'
+[21:11:26] Subscribed to topic: py-libp2p
+[21:11:36] Subscribed to topic: py-libp2p
+[21:20:03] Universal Connectivity Chat Started
+[21:20:03] Nickname: peer-1760629799
+[21:20:03] Topic: universal-connectivity
+[21:20:03] Multiaddr: /ip4/0.0.0.0/tcp/55258/p2p/QmPK9UGSbqRtoWpyz4medaJrP9PmXmjAhSnsdjZTSzhAsx
+[21:20:03] Commands: /quit, /peers, /status, /multiaddr
+[21:20:03] Joined chat room as 'peer-1760629799'
+[22:36:19] Universal Connectivity Chat Started
+[22:36:19] Nickname: peer-1760634378
+[22:36:19] Topic: universal-connectivity
+[22:36:19] Multiaddr: /ip4/0.0.0.0/tcp/55824/p2p/Qmbj7Ji51NpF9CodGW6PV5c1zEXuHMt6LQNrgqQJM9Bi9j
+[22:36:19] Commands: /quit, /peers, /status, /multiaddr
+[22:36:19] Joined chat room as 'peer-1760634378'
+[22:36:31] Universal Connectivity Chat Started
+[22:36:31] Nickname: peer-1760634391
+[22:36:31] Topic: universal-connectivity
+[22:36:31] Multiaddr: /ip4/0.0.0.0/tcp/55826/p2p/QmNNF5Dkk7UEmdN3GKKZtY87BW6bMKfwFHCtNwFETJnh6z
+[22:36:31] Commands: /quit, /peers, /status, /multiaddr
+[22:36:31] Joined chat room as 'peer-1760634391'
+[22:37:48] Subscribed to topic: py-libp2p
+[22:38:07] Subscribed to topic: py-libp2p
+[11:51:38] Universal Connectivity Chat Started
+[11:51:38] Nickname: peer-1760768499
+[11:51:38] Topic: universal-connectivity
+[11:51:38] Multiaddr: /ip4/0.0.0.0/tcp/64159/p2p/QmPnS1iBuh6rpZPKXt5CnrfaAadjZD9m5SW5EetvEGuzud
+[11:51:38] Commands: /quit, /peers, /status, /multiaddr
+[11:51:38] Joined chat room as 'peer-1760768499'
+[11:52:00] Universal Connectivity Chat Started
+[11:52:00] Nickname: peer-1760768521
+[11:52:00] Topic: universal-connectivity
+[11:52:00] Multiaddr: /ip4/0.0.0.0/tcp/64166/p2p/QmcdLf2J8k7XaM1WU5sLG9GMiiFa1F6jqdpkgQq5BLZpFW
+[11:52:00] Commands: /quit, /peers, /status, /multiaddr
+[11:52:00] Joined chat room as 'peer-1760768521'
+[11:52:55] Subscribed to topic: libp2p
+[11:53:10] Subscribed to topic: libp2p
+[10:02:12] Universal Connectivity Chat Started
+[10:02:12] Nickname: peer-1761107532
+[10:02:12] Topic: universal-connectivity
+[10:02:12] Multiaddr: /ip4/0.0.0.0/tcp/50838/p2p/QmYjYEVhXKYAdomNrihxfHfjuN7BbyvYb8G2NhhEJsR2w3
+[10:02:12] Commands: /quit, /peers, /status, /multiaddr
+[10:02:12] Joined chat room as 'peer-1761107532'
+[10:02:40] Universal Connectivity Chat Started
+[10:02:40] Nickname: peer-1761107559
+[10:02:40] Topic: universal-connectivity
+[10:02:40] Multiaddr: /ip4/0.0.0.0/tcp/50868/p2p/QmVbZve9am32KrzmiuHTes9gQqD65ADtFSXEJnMEdaxmLT
+[10:02:40] Commands: /quit, /peers, /status, /multiaddr
+[10:02:40] Joined chat room as 'peer-1761107559'
