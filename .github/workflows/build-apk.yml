@@ -9,7 +9,7 @@ on:
 
 jobs:
   build-android:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     
     steps:
     - name: Checkout code
@@ -145,7 +145,8 @@ jobs:
     
     - name: Build APK with Buildozer
       run: |
-        buildozer -v android debug
+        buildozer -v android debug 2>&1 | tee build.log
+      continue-on-error: true
       env:
         ANDROID_SDK_ROOT: /usr/local/lib/android/sdk
         ANDROID_HOME: /usr/local/lib/android/sdk
@@ -156,13 +157,30 @@ jobs:
         USE_SDK_WRAPPER: 1
         GRADLE_OPTS: "-Dorg.gradle.jvmargs=-Xmx2048m -Dorg.gradle.daemon=false"
     
+    - name: Show build errors if failed
+      if: failure()
+      run: |
+        echo "=== Last 200 lines of build log ==="
+        tail -n 200 build.log || true
+        echo "=== Searching for ERROR messages ==="
+        grep -i "error" build.log | tail -n 50 || true
+        echo "=== Searching for FAILED messages ==="
+        grep -i "failed" build.log | tail -n 50 || true
+    
     - name: List output files
-      if: always()
       run: |
         echo "Contents of bin directory:"
         ls -la bin/ || echo "No bin directory"
         echo "Contents of .buildozer:"
-        find .buildozer -name "*.apk" || echo "No APK files found"
+        find .buildozer -name "*.apk" 2>/dev/null || echo "No APK files found"
+    
+    - name: Upload build log
+      if: always()
+      uses: actions/upload-artifact@v4
+      with:
+        name: build-log-${{ github.sha }}
+        path: build.log
+        retention-days: 7
     
     - name: Upload APK artifact
       uses: actions/upload-artifact@v4
